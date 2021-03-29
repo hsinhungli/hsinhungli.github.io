@@ -129,12 +129,12 @@ img {
 }
 
 .btn:hover {
-	box-shadow: inset 0 0 0 5px #555555;
+	box-shadow: inset 0 0 0 2px #555555;
 	color: #000000;
 }
 
 .btn_d:hover {
-	box-shadow: inset 0 0 0 5px #555555;
+	box-shadow: inset 0 0 0 2px #555555;
 	color: #000000;
 }
 
