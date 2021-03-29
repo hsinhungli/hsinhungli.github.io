@@ -23,7 +23,7 @@ img {
   height: 60px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 5px 5px #555; /*#FF5733*/
+  box-shadow: 0px 2px 2px #555; /*#FF5733*/
   top: 0; /* required */
   position: sticky;
 }
@@ -107,7 +107,7 @@ img {
   left: 15px;
 }
 
-/*-------------------- Below are the style fot the experiment --------------------*/
+/*-------------------- Below are the style for the experiment --------------------*/
 .btn_d{ /* button for decision task*/
 	white-space: normal;
 	width: 40px;
