@@ -1,0 +1,213 @@
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  margin-bottom: 0;
+  font-family: Arial;
+}
+
+h1 {
+    margin-top: -40px;
+}
+
+img {
+  display: block;
+  margin-left : auto;
+  margin-right : auto;
+}
+
+/* Style tab links */
+#tabholder{
+  background-color: #555;
+  width: 100%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 10px #555; /*#FF5733*/
+  top: 0; /* required */
+  position: sticky;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  /*  float: left; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 0px;
+  font-size: 20px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  padding: 80px 20px; /*balnk at top and on the sides*/
+  height: 100%;
+  margin-top: 0px;
+}
+
+#AuthorTable {
+  width: 800px;
+  display: table;
+  margin-top: 2%;
+  margin-left:25%;
+  margin-right:auto;
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+}
+
+.AuthorRow {
+  display: table-row;
+  height: 224px;
+}
+
+.PicCell {
+  width: 30%;
+  display: table-cell;  
+  margin-right: 10px;
+}
+
+.authorpic {
+  margin-right: 10px;
+}
+
+.BioCell {
+  width: 70%;
+  display: table-cell;
+  background: #f2f2f2;
+  vertical-align: middle;
+}
+
+
+#ReadPaper {background-color:  white;}
+#TryExperiments {background-color: white;}
+#AboutUs {
+	background-color: white;
+	background-image: url("../images/seal.png");
+	background-repeat: no-repeat;
+	background-size: 35%;
+	background-position: top 10px left 20px;
+}
+
+.name {
+  text-align: left;
+  font-family: "sans-serif";
+  font-size: 3vh;
+  margin-left: 0.5em;
+}
+
+.span_link {
+  position: relative;
+  left: 15px;
+}
+
+/*-------------------- Below are the style fot the experiment --------------------*/
+.btn_d{ /* button for decision task*/
+	white-space: normal;
+	width: 40px;
+	height: 60px;
+	text-align: center;
+	margin-left: 4px;
+	margin-right: 4px;
+	border: 0 none;
+}
+
+.btn{
+	white-space: normal;
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 0 none;
+}
+
+.btn:hover {
+	box-shadow: inset 0 0 0 5px #555555;
+	color: #000000;
+}
+
+.btn_d:hover {
+	box-shadow: inset 0 0 0 5px #555555;
+	color: #000000;
+}
+
+.btn-lg {
+	font-size: 18px;
+	color: #000000;
+	text-align: center;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.CBimg{
+	width: 15%;
+	height: auto;
+	vertical-align:middle;
+}
+
+#submitButton {
+	    display: none;
+	}
+
+#welcome{
+	    width:500px;
+	    font-family: Arial, Helvetica;
+	    font-size: 18px;
+	    margin: 0px auto;
+	}
+
+#screentest{
+	    width:500px;
+	    font-family: Arial, Helvetica;
+	    font-size: 18px;
+	    margin: 0px auto;
+	    display: none;
+	}
+
+#button_next{
+	    font-size: 14pt;
+	    width: 12em;
+	    font-family: Arial, Helvetica;
+	    height:auto;
+	    margin: 0 auto;
+	}
+#canvas {
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 0px;
+	display: none;
+	background: gray;
+}
+
+#button {
+	width: 600px;
+	height: 90px;
+	margin: 0 auto;
+}
+
+#instruction {
+	font-size: 20px;
+	font-family: Arial, Helvetica;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#colorblind_test {
+	font-size: 20px;
+	font-family: Arial, Helvetica;
+	margin-top: 15px;
+	display: none;
+}
+
+#button_continue {
+	width: 200px;
+	height: 60px;
+}

@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css?dl=0" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- JQuery, D3, Raphael, math js-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/raphael.js"></script>
+  <script src="js/math.js?dl=0"></script>
+  <script src="js/tool.js?dl=0"></script>
+  <script src="js/d3.min.js?dl=0"></script>
+  <script src="js/custom_amz.js?dl=0"></script> 
+  <script src="js/custom_demo_amz.js?dl=0"></script>
+
+</head>
+
+<body>
+  <!-- Tabs -->
+  <div class="text-center" id="tabholder">
+    <button class="tablink" onclick="openPage('ReadPaper', this, '#bfbfbf')">Read paper</button>
+    <button class="tablink" onclick="openPage('TryExperiments', this, '#bfbfbf')">Try experiments</button>
+    <button class="tablink" onclick="openPage('AboutUs', this, '#bfbfbf')"  id="defaultOpen">About us</button>
+  </div>
+
+  <!-- DIV of each tab -->
+  <div id="ReadPaper" class="tabcontent">
+    <embed src="Li and Ma_2020.pdf" type="application/pdf" width="100%" height="115%" />
+  </div>
+
+  <div id="TryExperiments" class="tabcontent">
+    <div class="row text-center" id="canvas" > <!-- Canvas for experiment stimulus --> </div>
+    <div class="row text-center" id='instruction'> <!-- instruction/question --> </div>
+    <div class="row text-center" id='button'> <!-- buttons --> </div>
+  </div>
+
+  <div id="AboutUs" class="tabcontent">
+    <div id = "AuthorTable">
+        <div class = "AuthorRow">
+            <div class="PicCell">
+                <img class="authorpic" src="images/hsin-hung.png" alt="Hsin-Hung Li" width="160" height="224">
+            </div>
+            <div class="BioCell">
+                <p class="name"> Hsin-Hung Li </p>
+                <p style="margin-left:1em;"> Hsin-Hung as a postdoc in NYU, working with Wei Ji Ma and Clay Curtis. He uses both computational modeling and fMRI technique to study how human report confidence and uncertainty in perceptual decision-making and visual working memory tasks.</p>
+                <span class="span_link"> <i class="fa fa-book" aria-hidden="true">&nbsp </i><a href="https://scholar.google.com/citations?user=9ZKsj_kAAAAJ&hl=en&authuser=2" target="_blank">google scholar <br></a></span>
+                <span class="span_link"> <i class="fa fa-envelope-o" aria-hidden="true">&nbsp </i><a href="hsin.hung.li@nyu.edu">hsin.hung.li@nyu.edu</a></span>
+            </div>
+        </div>
+        <div class = "AuthorRow">
+          <div class="PicCell">
+                <img class="authorpic" src="images/weiji.jpg" alt="Wei Ji Ma" width="160" height="224">
+          </div>
+          <div class="BioCell">
+                <p class="name"> Wei Ji Ma </p>
+                <p style="margin-left:1em;"> Wei Ji Ma is Professor of Neural Science and Psychology at NYU. His lab studies decision-making in perception, attention, working memory, social cognition, and planning, using a combination of human behavioral experiments, computational modeling, and - through collaboration - electrophysiology and neuroimaging. </p>
+                <span class="span_link"> <i class="fa fa-book" aria-hidden="true">&nbsp </i><a href="https://www.cns.nyu.edu/malab/index.html" target="_blank">Ma Lab @ NYU <br></a></span>
+                <span class="span_link"> <i class="fa fa-envelope-o" aria-hidden="true">&nbsp </i><a href="weijima@nyu.edu">weijima@nyu.edu</a></span>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+
+  //Deal with the non-selected tab first
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";  //The color of non-selected tabs
+    tablinks[i].style.color = "white";
+  }
+
+  //Deal with the selected tab
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+  elmnt.style.color = "black";
+  //document.getElementById(pageName).style.color = "black";
+
+  if (pageName=='TryExperiments'){
+    demoPage1()
+  } else {
+      textIdx  = 0;
+      drawCanvas();
+      clearButton();
+      clearInstruction();
+      paper.clear();
+  }
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</html>
